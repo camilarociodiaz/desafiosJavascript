@@ -71,7 +71,7 @@ function precioFinalBackout() {
 
 }
 
-alert("El precio de la cortina Blackout es de $" + precioFinalBackout())
+
 
 
 
@@ -111,4 +111,9 @@ function precioFinalSunscreen() {
 
 }
 
-alert("El precio de la cortina Sunscreen es de $" + precioFinalSunscreen())
+
+if (tela == "BLACKOUT") {
+    alert("El precio de la cortina Blackout es de $" + precioFinalBackout())
+} else {
+    alert("El precio de la cortina Sunscreen es de $" + precioFinalSunscreen())
+}

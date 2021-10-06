@@ -42,7 +42,6 @@ h2 {
     font-style: normal;
     font-weight: bold;
     font-size: 1.5rem;
-    /* identical to box height */
     align-items: center;
     text-align: center;
     text-transform: capitalize;
@@ -53,9 +52,6 @@ h2 {
 
 
 /* Boton desafio */
-
-
-/* Auto Layout */
 
 .botones {
     display: flex;
@@ -71,8 +67,8 @@ a {
 .botonDesafio {
     display: flex;
     flex-direction: column;
-    padding: 15px 41px;
-    width: 259px;
+    padding: 15px 20px;
+    width: 379px;
     height: 65px;
     background: rgba(255, 255, 255, 0.5);
     box-shadow: 4px 4px 4px rgb(0 0 0 / 20%);
@@ -94,59 +90,11 @@ li {
     font-weight: bold;
     font-size: 20px;
     line-height: 24px;
-    /* identical to box height */
     display: flex;
     align-items: center;
     text-align: center;
     text-transform: capitalize;
     color: #B19B87;
-    /* Inside Auto Layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 10px 0px;
-}
-
-
-/* boton repositorio Github */
-
-#botonGithub {
-    /* Boton desafio */
-    /* Auto Layout */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 80px 15px 30px;
-    position: absolute;
-    width: 259px;
-    height: 65px;
-    left: calc(50% - 259px/2 - 1.5px);
-    top: 131px;
-    background: rgba(29, 26, 26, 0.5);
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(4px);
-    /* Note: backdrop-filter has minimal browser support */
-    border-radius: 10px;
-}
-
-#textoGithub {
-    position: static;
-    width: 193px;
-    height: 24px;
-    left: 8px;
-    top: 23px;
-    font-family: Helvetica LT Std;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 24px;
-    /* identical to box height */
-    display: flex;
-    align-items: center;
-    text-align: center;
-    text-transform: capitalize;
-    color: #FFFFFF;
-    /* Inside Auto Layout */
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -164,4 +112,5 @@ li {
     right: 22.46%;
     top: 19.97%;
     bottom: 75.65%;
+    color: #B19B87;
 }
