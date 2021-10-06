@@ -1,12 +1,9 @@
 //LE PEDIMOS AL USUARIO QUE INGRESE 3 NROS Y LE DECIMOS CUÁL ES EL MAYOR//
 
-let numeroUno = prompt("Ingrese un número");
-let numeroDos = prompt("Ingrese el segundo número");
-let numeroTres = prompt("Ingrese el tercer número");
+let numeroUno = parseInt(prompt("Ingrese un número"));
+let numeroDos = parseInt(prompt("Ingrese el segundo número"));
+let numeroTres = parseInt(prompt("Ingrese el tercer número"));
 
-numeroUno = parseInt(numeroUno);
-numeroDos = parseInt(numeroDos);
-numeroTres = parseInt(numeroTres);
 
 //si el primer nro es mayor//
 

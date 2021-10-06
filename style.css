@@ -110,7 +110,7 @@ li {
 
 /* boton repositorio Github */
 
-.botonGithub {
+#botonGithub {
     /* Boton desafio */
     /* Auto Layout */
     flex-direction: column;
@@ -129,8 +129,7 @@ li {
     border-radius: 10px;
 }
 
-.textoGithub {
-    /* Desafío 01 */
+#textoGithub {
     position: static;
     width: 193px;
     height: 24px;

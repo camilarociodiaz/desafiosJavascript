@@ -12,8 +12,21 @@ for (let i = 0; i < 5; i++) {
     let nombreAlumno = prompt("Ingrese el nombre del alumno");
     let apellidoAlumno = prompt("Ingrese el apellido del alumno");
     let notaUno = parseInt(prompt("Ingrese la primer nota"));
+    while (isNaN(notaUno) == false) {
+        alert("No es un número");
+        notaUno = parseInt(prompt("Ingrese la primer nota"));
+    }
     let notaDos = parseInt(prompt("Ingrese la segunda nota"));
+    while (isNaN(notaDos) == false) {
+        alert("No es un número");
+        notaDos = parseInt(prompt("Ingrese la primer nota"));
+    }
     let notaTres = parseInt(prompt("Ingrese la tercer nota"));
+    while (isNaN(notaTres) == false) {
+        alert("No es un número");
+        notaTres = parseInt(prompt("Ingrese la primer nota"));
+    }
+
 
     //calcular promedio//
     let sumaNotas = parseInt(notaUno + notaDos + notaTres);
