@@ -1,116 +1,122 @@
-/* FONDO */
-
-* {
-    Margin: 0;
-    padding: 0;
-}
-
-body {
-    width: auto;
-    background-image: url(fondob.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-article {
-    display: flex;
-    margin: 2rem;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-}
-
-h1 {
-    position: absolute;
-    width: auto;
-    font-family: Helvetica LT Std;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 2rem;
-    align-items: center;
-    text-align: center;
-    text-transform: capitalize;
-    color: #FFFFFF;
-    text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-    margin: 1rem;
-}
-
-h2 {
-    position: absolute;
-    width: auto;
-    font-family: Helvetica LT Std;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 1.5rem;
-    align-items: center;
-    text-align: center;
-    text-transform: capitalize;
-    color: #FFFFFF;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin: 4rem;
-}
-
-
-/* Boton desafio */
-
-.botones {
-    display: flex;
-    flex-direction: column;
-    margin-top: 9rem;
-    width: auto;
-}
-
-a {
-    text-decoration: none;
-}
-
-.botonDesafio {
-    display: flex;
-    flex-direction: column;
-    padding: 15px 20px;
-    width: 379px;
-    height: 65px;
-    background: rgba(255, 255, 255, 0.5);
-    box-shadow: 4px 4px 4px rgb(0 0 0 / 20%);
-    backdrop-filter: blur(4px);
-    border-radius: 10px;
-    margin: auto;
-    margin-bottom: 1rem;
-    align-items: center;
-}
-
-li {
-    position: static;
-    width: 99px;
-    height: 24px;
-    left: 80px;
-    top: 15px;
-    font-family: Helvetica LT Std;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    text-transform: capitalize;
-    color: #B19B87;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 10px 0px;
-}
-
-.iconoGithub {
-    height: 50px;
-    width: 50px;
-    left: 288px;
-    top: 147px;
-    border-radius: 0px;
-    position: absolute;
-    left: 69.57%;
-    right: 22.46%;
-    top: 19.97%;
-    bottom: 75.65%;
-    color: #B19B87;
-}
+        /* FONDO */
+        
+        * {
+            Margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            width: auto;
+            background-image: url(fondob.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        article {
+            display: flex;
+            margin: 2rem;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+        
+        h1 {
+            position: absolute;
+            width: auto;
+            font-family: Helvetica LT Std;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 2rem;
+            align-items: center;
+            text-align: center;
+            text-transform: capitalize;
+            color: #FFFFFF;
+            text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+            margin: 1rem;
+        }
+        
+        h2 {
+            position: absolute;
+            width: auto;
+            font-family: Helvetica LT Std;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 1.5rem;
+            align-items: center;
+            text-align: center;
+            text-transform: capitalize;
+            color: #FFFFFF;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            margin: 4rem;
+        }
+        /* Boton desafio */
+        
+        .botones {
+            display: flex;
+            flex-direction: column;
+            margin-top: 9rem;
+            width: auto;
+        }
+        
+        a {
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        
+        a:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 4px 4px 4px rgb(0 0 0 / 20%);
+            filter: none;
+            color: #d9d4e7;
+        }
+        
+        .botonDesafio {
+            display: flex;
+            flex-direction: column;
+            padding: 15px 20px;
+            width: 43vh;
+            height: 65px;
+            background: rgba(255, 255, 255, 0.5);
+            box-shadow: 4px 4px 4px rgb(0 0 0 / 20%);
+            backdrop-filter: blur(4px);
+            border-radius: 10px;
+            margin: auto;
+            margin-bottom: 1rem;
+            align-items: center;
+        }
+        
+        li {
+            position: static;
+            width: 99px;
+            height: 24px;
+            left: 80px;
+            top: 15px;
+            font-family: Helvetica LT Std;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            text-transform: capitalize;
+            color: #B19B87;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 10px 0px;
+        }
+        
+        .iconoGithub {
+            height: 50px;
+            width: 50px;
+            left: 288px;
+            top: 147px;
+            border-radius: 0px;
+            position: absolute;
+            left: 69.57%;
+            right: 22.46%;
+            top: 19.97%;
+            bottom: 75.65%;
+            color: #B19B87;
+        }
