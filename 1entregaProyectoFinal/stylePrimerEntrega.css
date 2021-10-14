@@ -1,0 +1,39 @@
+header nav div a img {
+    height: 2rem;
+}
+
+.tarjetaPadre {
+    margin: 8rem;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    align-items: center;
+    justify-content: center;
+    align-content: stretch;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.icono {
+    color: white;
+    height: 2rem;
+}
+
+img.icono {
+    color: white;
+}
+
+a:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 4px 4px 4px rgb(0 0 0 / 20%);
+    filter: none;
+    color: #d9d4e7;
+}
