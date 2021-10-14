@@ -118,10 +118,13 @@ function main() {
     alert("El total de la compra es de : $" + suma);
 }
 
+
+
 function mostrarProductos() {
-    let opcion = parseInt(prompt("Seleccione la prenda:\n\n 1- Remera Vicent \n\n 2- Remera planet\n\n 3- Jean Vanens\n\n 4-Camisa Casper \n\n5-Zapatilla Laid \n\n6- Buzo Hard\n\n presione 0 para Finalizar compra"));
+    let opcion = parseInt(prompt("Seleccione la prenda:\n\n 1- Remera Planet \n\n 2- Remera Vicent \n\n 3- Camisa Casper\n\n 4-Jean Vanens \n\n5-Zapatilla Laid \n\n6- Buzo Hard\n\n presione 0 para Finalizar compra"));
     return opcion;
 }
+
 
 function agregarProducto(categoria, nombre, color) {
     carrito.push(categoria, nombre, color);

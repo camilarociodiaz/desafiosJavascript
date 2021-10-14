@@ -83,33 +83,22 @@
             margin: auto;
             margin-bottom: 1rem;
             align-items: center;
+            justify-content: center;
         }
         
         li {
-            position: static;
-            width: 99px;
-            height: 24px;
-            left: 80px;
-            top: 15px;
             font-family: Helvetica LT Std;
             font-style: normal;
             font-weight: bold;
-            font-size: 20px;
-            line-height: 24px;
+            font-size: 1.4rem;
             display: flex;
-            align-items: center;
-            text-align: center;
             text-transform: capitalize;
             color: #B19B87;
-            flex: none;
-            order: 0;
-            flex-grow: 0;
-            margin: 10px 0px;
         }
         
         .iconoGithub {
             height: 50px;
-            width: 50px;
+            width: 9rem;
             left: 288px;
             top: 147px;
             border-radius: 0px;
