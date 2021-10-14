@@ -12,7 +12,7 @@
             background-attachment: fixed;
         }
         
-        article {
+        .titulos {
             display: flex;
             margin: 2rem;
             flex-direction: column;
@@ -74,7 +74,7 @@
             display: flex;
             flex-direction: column;
             padding: 15px 20px;
-            width: 43vh;
+            width: 54vh;
             height: 65px;
             background: rgba(255, 255, 255, 0.5);
             box-shadow: 4px 4px 4px rgb(0 0 0 / 20%);
