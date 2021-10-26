@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="desafio8.css">
+
+    <title> APLICANDO DOM </title>
+</head>
+
+<body>
+
+
+
+
+    <header>
+
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand"> <img src="1entregaProyectoFinal/images/Isologotipo blanco.png" alt=""></a>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <i class="icono fa-solid fa-cart-shopping"></i>
+                    <button class="btn btn-outline-light" type="submit"><img class="icono fa-thin fa-user" src="1entregaProyectoFinal/images/shopping-cart (1).svg" alt="">  </button>
+                </form>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+        Aprovecha nuestro cupon de descuento <strong>CODERHOUSE</strong> y accede a un 30%OFF!
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <div>
+        <p>Qué producto deseas agregar? </p>
+        <input type="text" id="producto">
+        <br>
+        <button onclick="agregarLista()" class="btn btn-dark"> Añadir al carrito </button>
+
+        <button onclick="eliminarLista()" class="btn btn-dark">Eliminar</button>
+    </div>
+
+
+    <div>
+
+        <ul id="lista">
+        </ul>
+
+    </div>
+
+
+
+    <div class="tarjetaPadre">
+
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="1entregaProyectoFinal/images/remeraPlanet.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Remera Planet</h5>
+                        <div class=" justify-content-mx-auto ">
+                            <p class="card-text">$1990</p>
+                            <button class="btn btn-dark"> Añadir al carrito </button>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="1entregaProyectoFinal/images/remeraVicent.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Remera Vicent</h5>
+                        <div class=" justify-content-mx-auto ">
+                            <p class="card-text">$2190</p>
+                            <button class="btn btn-dark"> Añadir al carrito </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="1entregaProyectoFinal/images/buzoHard01.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Buzo Hard</h5>
+                        <div class=" justify-content-mx-auto ">
+                            <p class="card-text">$5390</p>
+                            <button class="btn btn-dark"> Añadir al carrito </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="1entregaProyectoFinal/images/jean.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">jean Vanens </h5>
+                        <div class=" justify-content-mx-auto ">
+                            <p class="card-text">$5090</p>
+                            <button class="btn btn-dark"> Añadir al carrito </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="1entregaProyectoFinal/images/camisaCasper.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> Camisa Casper </h5>
+                        <div class=" justify-content-mx-auto ">
+                            <p class="card-text">$4090</p>
+                            <button class="btn btn-dark"> Añadir al carrito </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">
+                    <img src="1entregaProyectoFinal/images/zapatillaLaid01.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Zapatilla Laid </h5>
+                        <div class=" justify-content-mx-auto ">
+                            <p class="card-text">$5290</p>
+                            <button class="btn btn-dark"> Añadir al carrito </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
+
+
+    <script src="desafio8.js"></script>
+
+</body>
+
+</html>
