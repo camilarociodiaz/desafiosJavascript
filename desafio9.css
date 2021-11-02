@@ -1,0 +1,67 @@
+     /* FONDO */
+     
+     * {
+         Margin: 0;
+         padding: 0;
+         font-family: Helvetica LT Std;
+     }
+     
+     body {
+         width: auto;
+         background-color: rgb(218, 218, 218);
+         background-size: cover;
+         background-attachment: fixed;
+     }
+     
+     h2 {
+         display: flex;
+         margin: 2rem;
+         flex-direction: column;
+         align-items: center;
+         padding: 2rem;
+         width: auto;
+         font-family: Helvetica LT Std;
+         font-style: normal;
+         font-weight: bold;
+         font-size: 1, 5rem;
+         align-items: center;
+         text-align: center;
+         color: #FFFFFF;
+         text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+     }
+     
+     #containerPrincipal {
+         display: flex;
+         flex-wrap: nowrap;
+         flex-direction: column;
+         align-items: center;
+     }
+     
+     #formulario {
+         display: inline-flex;
+         flex-direction: column;
+         align-items: stretch;
+     }
+     
+     .botonStyle {
+         display: inline-flex;
+         width: auto;
+         flex-direction: column;
+         padding: 1rem;
+         background: rgba(255, 255, 255, 0.5);
+         backdrop-filter: blur(4px);
+         border-radius: 10px;
+         align-items: center;
+         justify-content: center;
+         margin: 1rem;
+     }
+     
+     input {
+         margin: 5px;
+         padding: 5px;
+     }
+     
+     .botonStyle:hover {
+         color: white;
+         background-color: grey;
+     }

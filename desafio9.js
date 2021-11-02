@@ -109,6 +109,11 @@ function AgregarAlDom() {
     <p> <strong> Color:</strong> ${colorI}</p>
     <p> <strong> Precio:</strong> ${precioI}</p>
     <hr>`;
+
+    contenedor.style.background = "black";
+    contenedor.style.color = "white";
+    contenedor.style.padding = "30px";
+    contenedor.style.margin = "30px";
 }
 
 
@@ -132,6 +137,14 @@ function mostrarTodasPrendas(e) {
         <p> <strong> Color:</strong> ${colorI}</p>
          <p> <strong> Precio:</strong> ${precioI}</p>
         <hr>`;
+
+        displayTodos.style.background = "white";
+        displayTodos.style.padding = "30px";
+        displayTodos.style.margin = "30px";
+
+
+
+
 
     }
 
