@@ -65,3 +65,10 @@
          color: white;
          background-color: grey;
      }
+     
+     .containerSecundario {
+         display: inline-flex;
+         align-items: stretch;
+         flex-direction: column;
+         flex-wrap: nowrap;
+     }
