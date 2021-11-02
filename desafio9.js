@@ -33,7 +33,7 @@ let bandera = false;
 //Ahora defino los eventos de los botones//
 
 miFormulario.addEventListener("submit", agregarPrenda);
-btnMostrar.addEventListener("clik", mostrarTodasPrendas);
+btnMostrar.addEventListener("click", mostrarTodasPrendas);
 
 inputNombre.focus();
 
@@ -115,21 +115,23 @@ function AgregarAlDom() {
 //funcion para mostrar todas las prendas en el div//
 
 
-let i = 0;
+
 
 function mostrarTodasPrendas(e) {
 
 
     e.preventDefault();
-    displayTodos.innerHTML = `<h3>Todas las prendas ingresadas al sistema:</h3>`;
+
+    displayTodos.innerHTML = `<h3>Todas las prendas ingresadas al sistema son:</h3>`;
 
 
-    for (const prenda of arrayPrendas()) {
+    for (const prenda of arrayPrendas) {
 
-        displayTodos.innerHTML = `<p> <strong> Nombre:</strong> ${nombreI}</p>
-    <p> <strong> Color:</strong> ${colorI}</p>
-    <p> <strong> Precio:</strong> ${precioI}</p>
-    <hr>`;
+        displayTodos.innerHTML += `
+        <p> <strong> Nombre:</strong> ${nombreI}</p>
+        <p> <strong> Color:</strong> ${colorI}</p>
+         <p> <strong> Precio:</strong> ${precioI}</p>
+        <hr>`;
 
     }
 
