@@ -30,6 +30,13 @@ function cargarEvent() {
 
     });
 
+    document.addEventListener('DOMContentLoaded', () => {
+
+        articulosCarrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+        carritoHTML();
+    })
+
 }
 
 function agregarPrenda(e) {
@@ -52,20 +59,17 @@ function agregarPrenda(e) {
 //eliminar prendas del carrito 
 function eliminarPrenda(e) {
 
-    e.preventDefault();
+
+    console.log(e.target.classList);
 
     if (e.target.classList.contains('borrarPrenda')) {
 
-        console.log(e.target);
-
-
-        console.log(e.target.getAttribute('data-id'));
 
         const prendaId = e.target.getAttribute('data-id');
 
+
+
         articulosCarrito = articulosCarrito.filter(prenda => prenda.id !== prendaId);
-
-
 
 
         carritoHTML();
@@ -90,13 +94,19 @@ function leerDatosPrenda(prenda) {
         id: prenda.querySelector('a').getAttribute('data-id'),
         cantidad: 1,
 
+
+
     }
 
 
     //revisar si un articulo ya existe en el carrito
 
     const existe = articulosCarrito.some(prenda => prenda.id === infoPrenda.id);
+
+
+
     if (existe) {
+
 
         const prenda = articulosCarrito.map(prenda => {
 
@@ -109,7 +119,10 @@ function leerDatosPrenda(prenda) {
                 return prenda;
             }
 
+
+
         });
+
 
         articulosCarrito = [...prenda];
 
@@ -162,7 +175,7 @@ function carritoHTML() {
             <td> ${prenda.precio} </td>
             <td> ${prenda.cantidad} </td>
             <td> 
-            <a href='#' class="borrarPrenda" data-id${prenda.id}> x </a>
+            <a href='#' class="borrarPrenda" data-id="${prenda.id}"> x </a>
             </td>      `
 
 
@@ -175,6 +188,22 @@ function carritoHTML() {
 
 
     })
+
+
+    //agregamos un localStorage al carrito de compras
+    sincronizarStorage();
+
+    function sincronizarStorage() {
+
+        localStorage.setItem('carrito', JSON.stringify(articulosCarrito));
+
+    }
+
+
+
+
+
+
 
 }
 
