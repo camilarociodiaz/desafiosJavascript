@@ -60,7 +60,6 @@ function agregarPrenda(e) {
 function eliminarPrenda(e) {
 
 
-    console.log(e.target.classList);
 
     if (e.target.classList.contains('borrarPrenda')) {
 
@@ -70,6 +69,12 @@ function eliminarPrenda(e) {
 
 
         articulosCarrito = articulosCarrito.filter(prenda => prenda.id !== prendaId);
+
+
+
+
+
+
 
 
         carritoHTML();
