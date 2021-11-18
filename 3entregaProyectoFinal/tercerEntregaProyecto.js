@@ -95,7 +95,6 @@ function leerDatosPrenda(prenda) {
     const infoPrenda = {
         imagen: prenda.querySelector('img').src,
         titulo: prenda.querySelector('h5').textContent,
-        talle: prenda.querySelector('select').value,
         precio: prenda.querySelector('p').textContent,
         id: prenda.querySelector('a').getAttribute('data-id'),
         cantidad: 1,
@@ -178,7 +177,6 @@ function carritoHTML() {
                     <img src="${prenda.imagen}" width="100">
             </td>
             <td>${prenda.titulo} </td>
-            <td> ${prenda.talle}   </td>
             <td> ${prenda.precio} </td>
             <td> ${prenda.cantidad} </td>
             <td> 
@@ -221,65 +219,3 @@ function limpiarHTML() {
         contenedorCarrito.removeChild(contenedorCarrito.firstChild);
     }
 }
-
-
-
-
-
-//AGREGANDO JQUERY //
-
-
-$(".talles").on("change", function(e) {
-
-    console.log(e.target.value);
-
-
-
-})
-
-
-//VACIAR CARRITO//
-
-$("#vaciarCarrito").click(function(e) {
-    e.preventDefault();
-
-});
-
-
-
-
-
-//agregar descripcion de que hay nuevo articulo en carrito//
-
-
-
-//APLICANDO ANIMACIONES 
-
-$(".textoConfirmacion").hide()
-$(".alertConfirmacion").hide()
-
-
-$(".agregarCarrito").on("click", function(e) {
-
-    e.preventDefault();
-
-
-    if (e.target.classList.contains('agregarCarrito')) {
-
-
-
-
-        $(".alertConfirmacion")
-            .show()
-            .css("color", "white").css("background-color", "rgb(32, 32, 32)")
-            .fadeOut(1800)
-
-    }
-
-
-    let alert = $(".agregarCarrito");
-    alert.animate({ height: "70px", width: "150px" }, "fast");
-    alert.animate({ height: "100px", width: "200px" }, "slow");
-    alert.animate({ height: "40px", width: "170px" }, "fast");
-
-})
