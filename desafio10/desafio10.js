@@ -245,23 +245,37 @@ $("#vaciarCarrito").click(function(e) {
 
 });
 
+
+
+
+
 //agregar descripcion de que hay nuevo articulo en carrito//
 
 
 
-$(".agregarCarrito").on("click", agregarItem);
+//APLICANDO ANIMACIONES 
+
+$(".textoConfirmacion").hide()
+$(".alertConfirmacion").hide()
 
 
+$(".agregarCarrito").on("click", function(e) {
 
-
-function agregarItem(e) {
     e.preventDefault();
 
 
-
-    let parrafo = " Se agregó el producto al carrito ";
-    $(".nuevoItem").append("<p>" + parrafo + "</p>");
+    if (e.target.classList.contains('agregarCarrito')) {
 
 
 
-}
+
+        $(".alertConfirmacion")
+            .show()
+            .css("color", "white").css("background-color", "rgb(32, 32, 32)")
+            .fadeOut(1800)
+
+    }
+
+
+
+})
