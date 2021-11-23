@@ -457,31 +457,24 @@ $(document).ready(function() {
 
 })
 
+
+
 //Agregar el clima segun la ubicacion exacta del cliente//
 
 function geoFinal(lat, long) {
 
     $.ajax({
 
-
-
-
-        url: 'http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=8ae405df7ea5fbdf016b4ca92b7720bc&lang=es',
-        type: "GET",
+        url: `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=8ae405df7ea5fbdf016b4ca92b7720bc`,
+        type: `GET`,
         data: {
-            appid: '8ae405df7ea5fbdf016b4ca92b7720bc',
-            dataType: "jsonp",
-            units: 'metric',
-            lang: 'es',
+            appid: `8ae405df7ea5fbdf016b4ca92b7720bc`,
+            dataType: `jsonp`,
+            units: `metric`,
+            lang: `es`,
 
         },
         success: function(data) {
-
-
-
-
-
-
 
 
             console.log(data);
@@ -504,12 +497,8 @@ function geoFinal(lat, long) {
 
 
 
-        }
+        },
 
 
     })
-
 }
-
-
-//ubicacion de locales//
