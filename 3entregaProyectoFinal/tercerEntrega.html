@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -13,8 +13,8 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-
-    <link rel="stylesheet" href="styleSegundaEntrega.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="tercerEntrega.css">
 
     <title>Tienda Ecommerce</title>
 </head>
@@ -29,11 +29,19 @@
         <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand"> <img src="images/Isologotipo blanco.png" alt=""></a>
+
+                <div id="caja"> </div>
+
+
                 <form class="d-flex">
+
+
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <i class="icono fa-solid fa-cart-shopping"></i>
                     <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img class="icono fa-thin fa-user" src="images/shopping-cart (1).svg" alt="">  </button>
                 </form>
+
+
             </div>
         </nav>
 
@@ -59,6 +67,7 @@
 
                                 <th>Imagen</th>
                                 <th>Nombre</th>
+                                <th>Talle</th>
                                 <th> Precio </th>
                                 <th> Cantidad</th>
                                 <th></th>
@@ -71,10 +80,11 @@
 
 
                     </div>
+                    <td id="precioTotalTabla"> </td>
 
 
                 </table>
-
+                <a href="paginas/iniciarCompra.html" id="iniciarCompra" class="btn btn-dark"> Iniciar compra </a>
                 <a href="" id="vaciarCarrito" class="btn btn-dark"> Vaciar Carrito </a>
 
 
@@ -92,6 +102,19 @@
     </div>
 
 
+    <div class="alertConfirmacion">
+        <p>El producto fue agregado al carrito</p>
+    </div>
+
+
+
+    <div>
+
+        <img id="banner" src="images/banner.jpg" alt="">
+
+    </div>
+
+
 
 
 
@@ -104,10 +127,19 @@
                     <img src="images/remeraPlanet.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Remera Planet</h5>
-                        <div class=" justify-content-mx-auto ">
+                        <div class="contenedor  justify-content-mx-auto ">
+                            <select name="" class="talles">
+<option value="S"> S </option>
+<option value="M">M</option>
+<option value="L">L</option>
+<option value="XL">XL</option>
+                            </select>
                             <p class="card-text">$1990</p>
                             <a href="#" class="btn btn-dark agregarCarrito" data-id="1">Añadir al carrito</a>
-
+                            <p class="nuevoItem"></p>
+                        </div>
+                        <div class="textoConfirmacion">
+                            <p> Se agregó el producto al carrito </p>
                         </div>
                     </div>
                 </div>
@@ -117,10 +149,19 @@
                     <img src="images/remeraVicent.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Remera Vicent</h5>
-                        <div class=" justify-content-mx-auto ">
+                        <div class=" contenedor justify-content-mx-auto ">
+                            <select name="" class="talles">
+                                <option value="S"> S </option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                                            </select>
                             <p class="card-text">$2190</p>
                             <a href="#" class="btn btn-dark agregarCarrito" data-id="2">Añadir al carrito</a>
-
+                            <p class="nuevoItem"></p>
+                        </div>
+                        <div class="textoConfirmacion">
+                            <p> Se agregó el producto al carrito </p>
                         </div>
                     </div>
                 </div>
@@ -130,10 +171,19 @@
                     <img src="images/buzoHard01.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Buzo Hard</h5>
-                        <div class=" justify-content-mx-auto ">
+                        <div class="contenedor  justify-content-mx-auto ">
+                            <select name="" class="talles">
+                                <option value="S"> S </option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                                            </select>
                             <p class="card-text">$5390</p>
                             <a href="#" class="btn btn-dark agregarCarrito" data-id="3">Añadir al carrito</a>
-
+                            <p class="nuevoItem"></p>
+                        </div>
+                        <div class="textoConfirmacion">
+                            <p> Se agregó el producto al carrito </p>
                         </div>
                     </div>
                 </div>
@@ -143,10 +193,19 @@
                     <img src="images/jean.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">jean Vanens </h5>
-                        <div class=" justify-content-mx-auto ">
+                        <div class=" contenedor justify-content-mx-auto ">
+                            <select name="" class="talles">
+                                <option value="S"> S </option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                                            </select>
                             <p class="card-text">$5090</p>
                             <a href="#" class="btn btn-dark agregarCarrito" data-id="4">Añadir al carrito</a>
-
+                            <p class="nuevoItem"></p>
+                        </div>
+                        <div class="textoConfirmacion">
+                            <p> Se agregó el producto al carrito </p>
                         </div>
                     </div>
                 </div>
@@ -156,10 +215,19 @@
                     <img src="images/camisaCasper.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"> Camisa Casper </h5>
-                        <div class=" justify-content-mx-auto ">
+                        <div class=" contenedor justify-content-mx-auto ">
+                            <select name="" class="talles">
+                                <option value="S"> S </option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                                            </select>
                             <p class="card-text">$4090</p>
                             <a href="#" class="btn btn-dark agregarCarrito" data-id="5">Añadir al carrito</a>
-
+                            <p class="nuevoItem"></p>
+                        </div>
+                        <div class="textoConfirmacion">
+                            <p> Se agregó el producto al carrito </p>
                         </div>
                     </div>
                 </div>
@@ -170,10 +238,19 @@
                     <img src="images/zapatillaLaid01.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Zapatilla Laid </h5>
-                        <div class=" justify-content-mx-auto ">
+                        <div class="contenedor justify-content-mx-auto ">
+                            <select name="" class="talles">
+                                <option value="S"> S </option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                                            </select>
                             <p class="card-text">$5290</p>
                             <a href="#" class="btn btn-dark agregarCarrito" data-id="6">Añadir al carrito</a>
-
+                            <p class="nuevoItem"></p>
+                        </div>
+                        <div class="textoConfirmacion">
+                            <p> Se agregó el producto al carrito </p>
                         </div>
                     </div>
                 </div>
@@ -197,9 +274,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
 
-
-
-    <script src="segundaEntregaProyecto.js"></script>
+    <script src="tercerEntrega.js"></script>
 
 
 

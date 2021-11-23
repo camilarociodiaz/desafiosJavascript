@@ -4,6 +4,7 @@ header nav div a img {
 
 .tarjetaPadre {
     margin: 8rem;
+    position: relative;
 }
 
 .tarjetaHijo {
@@ -56,4 +57,53 @@ a:hover {
     align-items: stretch;
     flex-direction: column;
     text-align: center;
+}
+
+.alertConfirmacion {
+    width: 45vh;
+    text-align: center;
+    align-content: center;
+    height: auto;
+    padding: 1rem;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    z-index: 1;
+    position: sticky;
+}
+
+#caja {
+    display: flex;
+    color: white;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#cajaClima {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#cajaClima2 {
+    display: flex;
+    align-items: flex-end;
+}
+
+#climaCiudad {
+    font-size: 1rem;
+}
+
+.btn {
+    margin: 5px;
+}
+
+#vaciarCarrito {
+    background-color: grey;
+}
+
+#banner {
+    width: -webkit-fill-available;
 }
