@@ -337,6 +337,9 @@ articulosCarrito.forEach(prenda => {
 });
 */
 
+
+
+
 function getLS() {
 
     if (localStorage.getItem('carrito') === nul) {
@@ -351,6 +354,11 @@ function getLS() {
     return productsCheck;
 
 }
+
+
+
+
+
 
 function totalLive() {
 
@@ -428,113 +436,60 @@ banner.animate({ height: "105%", width: "105%" }, (2000));
 
 
 
+$(document).ready(function() {
 
-let geoLoc = navigator.geolocation.getCurrentPosition(mostrarGeo);
-
-
-
-
-function mostrarGeo(position) {
-
-    console.log(position);
-
-    lat = position.coords.latitude;
-    long = position.coords.longitude;
-
-    console.log("latitud: " + lat);
-    console.log("Long: " + long);
+    let geoLoc = navigator.geolocation.getCurrentPosition(mostrarGeo);
 
 
+    function mostrarGeo(position) {
 
-}
+        console.log(position);
 
+        let lat = position.coords.latitude;
+        let long = position.coords.longitude;
 
-let lat;
+        console.log("latitud: " + lat);
+        console.log("Long: " + long);
 
-console.log(lat);
+        geoFinal(lat, long);
 
-let long;
+    }
 
-/*
-function mostrarLat(position) {
-
-    var lat = position.coords.latitude;
-    console.log(lat);
-
-}
-
-
-
-
-function mostrarLong(position) {
-
-    var Long = position.coords.longitude;
-
-}
-
-console.log(mostrarLat);
-
-
-*/
-
-/*let lat = -34.397
-let long = 150.644
-
-
-
-navigator.geolocation.getCurrentPosition(showPosition);
-
-
-
-function showPosition(position) {
-    var latitude = position.coords.latitude;
-    var longitude = position.coords.longitude;
-
-    let urlClima = "http://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=8ae405df7ea5fbdf016b4ca92b7720bc&lang=es"
-
-    console.log(urlClima);
-
-
-    /*
-    document.getElementById("mapholder").innerHTML = "<img src='" + img_url + "'>";
-
-   
-}
-
-
- */
+})
 
 //Agregar el clima segun la ubicacion exacta del cliente//
 
-$.ajax({
+function geoFinal(lat, long) {
+
+    $.ajax({
 
 
 
 
-    url: "http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + long + "&appid=8ae405df7ea5fbdf016b4ca92b7720bc&lang=es",
-    type: "GET",
-    data: {
-        appid: '8ae405df7ea5fbdf016b4ca92b7720bc',
-        dataType: "jsonp",
-        units: 'metric',
-        lang: 'es',
+        url: 'http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=8ae405df7ea5fbdf016b4ca92b7720bc&lang=es',
+        type: "GET",
+        data: {
+            appid: '8ae405df7ea5fbdf016b4ca92b7720bc',
+            dataType: "jsonp",
+            units: 'metric',
+            lang: 'es',
 
-    },
-    success: function(data) {
-
-
+        },
+        success: function(data) {
 
 
 
 
 
 
-        console.log(data);
-        let icono = data.weather[0].icon;
-        let iconoURL = "http://openweathermap.org/img/w/" + icono + ".png";
 
-        $("#icono").attr("src", iconoURL);
-        let clima = `<div id="cajaClima2">
+
+            console.log(data);
+            let icono = data.weather[0].icon;
+            let iconoURL = "http://openweathermap.org/img/w/" + icono + ".png";
+
+            $("#icono").attr("src", iconoURL);
+            let clima = `<div id="cajaClima2">
                              <p id="climaCiudad"><b>${data.name}</b></p> 
                                             
                              <img src= "${iconoURL}"></img>                            
@@ -545,16 +500,16 @@ $.ajax({
                         </div>`;
 
 
-        $("#caja").append(clima);
+            $("#caja").append(clima);
 
 
 
-    }
+        }
 
 
-})
+    })
 
-
+}
 
 
 //ubicacion de locales//
