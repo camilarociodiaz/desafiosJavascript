@@ -70,13 +70,6 @@ function eliminarPrenda(e) {
 
         articulosCarrito = articulosCarrito.filter(prenda => prenda.id !== prendaId);
 
-
-
-
-
-
-
-
         carritoHTML();
 
     }
@@ -140,20 +133,9 @@ function leerDatosPrenda(prenda) {
     }
 
 
-
-
-
-
-
-
-
-
     carritoHTML();
 
 }
-
-
-
 
 
 
@@ -256,63 +238,6 @@ function calcularTotal() {
 
 
 
-articulosCarrito.forEach(prenda => {
-
-    const rowCarrito = document.createElement('tr');
-    rowCarrito.innerHTML =
-
-        `<td>
-                <img src="${prenda.imagen}" width="100">
-        </td>
-        <td>${prenda.titulo} </td>
-        <td> ${prenda.talle}   </td>
-        <td> ${prenda.precio} </td>
-        <td> ${prenda.cantidad} </td>
-        <td> 
-        <a href='#' class="borrarPrenda" data-id="${prenda.id}"> x </a>
-        </td> 
-
-        
-        `
-
-
-
-
-
-
-    ;
-
-
-
-*/
-
-
-
-
-
-
-
-
-
-
-//AGREGANDO JQUERY //
-
-
-$(".talles").on("change", function(e) {
-
-    console.log(e.target.value);
-
-
-
-})
-
-
-//VACIAR CARRITO//
-
-$("#vaciarCarrito").click(function(e) {
-    e.preventDefault();
-
-});
 
 
 
@@ -354,9 +279,6 @@ function getLS() {
     return productsCheck;
 
 }
-
-
-
 
 
 
