@@ -166,31 +166,36 @@ function carritoHTML() {
 
     //recorrer el carrito para generar el HTML
 
+
+    /* <td>
+                
+                   <input type="number" class="form-control cantidad" min="1" value=${prenda.cantidad}> </td>
+          </td> */
+
     articulosCarrito.forEach(prenda => {
 
         const rowCarrito = document.createElement('tr');
         rowCarrito.innerHTML =
 
-            `<td>
-                    <img src="${prenda.imagen}" width="100">
-            </td>
+            `
+           <td>  
+           <img src="${prenda.imagen}" width="100">
+           </td>
+          
 
-                      <td>${prenda.titulo} </td>
+            <td>${prenda.titulo} </td>
             <td> ${prenda.talle}   </td>
             <td> ${prenda.precio} </td>
-            <td>
-            <input type="number" class="form-control cantidad" min="1" value=${prenda.cantidad} </td>
-            <td> 
+            
+            <td> ${prenda.cantidad} </td>
            
+            
+            <td> ${prenda.precio * prenda.cantidad}</td>
+
             <a href='#' class="borrarPrenda" data-id="${prenda.id}"> x </a>
             </td> 
            
             
-
-
-
-            
-
 
             `;
 

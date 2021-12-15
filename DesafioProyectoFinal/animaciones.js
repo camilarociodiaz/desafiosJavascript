@@ -107,3 +107,22 @@ function geoFinal(lat, long) {
 
     })
 }
+
+
+/*
+
+$(".agregarCarrito").click(function() {
+
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'El producto ha sido añadido al carrito',
+        showConfirmButton: false,
+        timer: 1500
+    })
+
+
+})
+
+
+*/

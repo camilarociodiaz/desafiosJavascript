@@ -119,3 +119,16 @@
             border-width: 1px;
             border-bottom: rgba(0, 0, 0, .125);
         }
+        
+        tr {
+            vertical-align: baseline;
+            text-align: center;
+        }
+        
+        th {
+            padding: 3px;
+        }
+        
+        .colorCheck:click {
+            background-color: rgba(0, 0, 0, .125);
+        }

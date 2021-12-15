@@ -38,7 +38,8 @@
                 <form class="d-flex">
 
                     <i class="icono fa-solid fa-cart-shopping"></i>
-                    <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img class="icono fa-thin fa-user" src="images/shopping-cart (1).svg" alt="">  </button>
+                    <button class="btn btn-outline-light" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img class="icono fa-thin fa-user" src="images/shopping-cart (1).svg" alt="">  </button>
                 </form>
 
 
@@ -49,66 +50,82 @@
 
 
 
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header">
-            <h5 id="offcanvasRightLabel"> Carrito de compras</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
 
 
-            <div id="carrito" class="rowCarrito">
-
-                <table id="listaCarrito" class="u-full-width">
-
-                    <div>
-                        <thead>
-                            <tr>
-
-                                <th>Imagen</th>
-                                <th>Nombre</th>
-                                <th>Talle</th>
-                                <th> Precio </th>
-                                <th> Cantidad</th>
-                                <th>Eliminar</th>
-
-                            </tr>
-
-                        </thead>
-                        <tbody></tbody>
 
 
-                        <tr>
+    <!-- carrito de compras -->
 
-                            <th> TOTAL </th>
-                            <th>
-                                <p id="total"></p>
-                            </th>
 
-                        </tr>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Carrito de compras</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+
+                    <div id="carrito" class="rowCarrito">
+
+                        <table id="listaCarrito" class="u-full-width">
+
+                            <div>
+                                <thead>
+                                    <tr>
+
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Talle</th>
+                                        <th> Precio </th>
+                                        <th> Cantidad</th>
+                                        <th>subtotal</th>
+                                        <th>Eliminar</th>
+
+                                    </tr>
+
+                                </thead>
+                                <tbody></tbody>
+
+
+                                <tr>
+
+                                    <th> TOTAL </th>
+                                    <th>
+                                        <p id="total"></p>
+                                    </th>
+
+                                </tr>
+
+                            </div>
+
+
+
+
+                        </table>
+
+
 
                     </div>
 
+                </div>
 
 
+                <div class="modal-footer">
 
-                </table>
-                <a href="paginas/iniciarCompra.html" id="iniciarCompra" class="btn btn-dark"> Iniciar compra </a>
-                <a href="" id="vaciarCarrito" class="btn btn-dark"> Vaciar Carrito </a>
-
-
+                    <a href="paginas/iniciarCompra.html" id="iniciarCompra" class="btn btn-dark"> Iniciar compra </a>
+                    <a href="" id="vaciarCarrito" class="btn btn-dark"> Vaciar Carrito </a>
+                </div>
             </div>
-
-
-
         </div>
-
-
-
-
-
-
     </div>
+
+
+
+
+
 
 
     <div class="alertConfirmacion">
@@ -137,6 +154,10 @@
     </div>
 
 
+
+
+    <!-- cards de prendas -->
+
     <div>
 
         <h2 class="fw-bolder">Últimos ingresos</h2>
@@ -164,7 +185,7 @@
 <option value="L">L</option>
 <option value="XL">XL</option>
                             </select>
-                            <p class="card-text">$1990</p>
+                            <p class="card-text">1990</p>
                             <a href="#" class="btn btn-dark agregarCarrito" data-id="1">Añadir al carrito</a>
                             <p class="nuevoItem"></p>
                         </div>
@@ -185,8 +206,8 @@
                                 <option value="M">M</option>
                                 <option value="L">L</option>
                                 <option value="XL">XL</option>
-                                                            </select>
-                            <p class="card-text">$2190</p>
+                            </select>
+                            <p class="card-text">2190</p>
                             <a href="#" class="btn btn-dark agregarCarrito" data-id="2">Añadir al carrito</a>
                             <p class="nuevoItem"></p>
                         </div>
@@ -208,7 +229,7 @@
                                 <option value="L">L</option>
                                 <option value="XL">XL</option>
                                                             </select>
-                            <p class="card-text">$5390</p>
+                            <p class="card-text">5390</p>
                             <a href="#" class="btn btn-dark agregarCarrito" data-id="3">Añadir al carrito</a>
                             <p class="nuevoItem"></p>
                         </div>
@@ -230,7 +251,7 @@
                                 <option value="L">L</option>
                                 <option value="XL">XL</option>
                                                             </select>
-                            <p class="card-text">$5090</p>
+                            <p class="card-text">5090</p>
                             <a href="#" class="btn btn-dark agregarCarrito" data-id="4">Añadir al carrito</a>
                             <p class="nuevoItem"></p>
                         </div>
@@ -252,7 +273,7 @@
                                 <option value="L">L</option>
                                 <option value="XL">XL</option>
                                                             </select>
-                            <p class="card-text">$4090</p>
+                            <p class="card-text">4090</p>
                             <a href="#" class="btn btn-dark agregarCarrito" data-id="5">Añadir al carrito</a>
                             <p class="nuevoItem"></p>
                         </div>
@@ -270,12 +291,13 @@
                         <h5 class="card-title">Zapatilla Laid </h5>
                         <div class="contenedor justify-content-mx-auto ">
                             <select name="" class="talles">
-                                <option value="S"> S </option>
-                                <option value="M">M</option>
-                                <option value="L">L</option>
-                                <option value="XL">XL</option>
-                                                            </select>
-                            <p class="card-text">$5290</p>
+                                <option value="40"> 40 </option>
+                                <option value="41">41</option>
+                                <option value="42"> 42 </option>
+                                <option value="44">44</option>
+                                <option value="46">46</option>
+                           </select>
+                            <p class="card-text">5290</p>
                             <a href="#" class="btn btn-dark agregarCarrito" data-id="6">Añadir al carrito</a>
                             <p class="nuevoItem"></p>
                         </div>
@@ -287,7 +309,171 @@
             </div>
 
 
+            <div class="col">
+                <div class="card tarjetaHijo">
+                    <img src="images/cinto1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> Cinto Rolling </h5>
+                        <div class=" contenedor justify-content-mx-auto ">
+                            <select name="" class="talles">
+                                <option value="S"> S </option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                                            </select>
+                            <p class="card-text">950</p>
+                            <a href="#" class="btn btn-dark agregarCarrito" data-id="7">Añadir al carrito</a>
+                            <p class="nuevoItem"></p>
+                        </div>
+                        <div class="textoConfirmacion">
+                            <p> Se agregó el producto al carrito </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="col">
+                <div class="card tarjetaHijo">
+                    <img src="images/short01.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> Short Summer </h5>
+                        <div class=" contenedor justify-content-mx-auto ">
+                            <select name="" class="talles">
+                                <option value="S"> S </option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                                            </select>
+                            <p class="card-text">4390</p>
+                            <a href="#" class="btn btn-dark agregarCarrito" data-id="8">Añadir al carrito</a>
+                            <p class="nuevoItem"></p>
+                        </div>
+                        <div class="textoConfirmacion">
+                            <p> Se agregó el producto al carrito </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col">
+                <div class="card tarjetaHijo">
+                    <img src="images/campera01.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> Campera Rompeviento </h5>
+                        <div class=" contenedor justify-content-mx-auto ">
+                            <select name="" class="talles">
+                                <option value="S"> S </option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                                            </select>
+                            <p class="card-text">5690 </p>
+                            <a href="#" class="btn btn-dark agregarCarrito" data-id="9">Añadir al carrito</a>
+                            <p class="nuevoItem"></p>
+                        </div>
+                        <div class="textoConfirmacion">
+                            <p> Se agregó el producto al carrito </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col">
+                <div class="card tarjetaHijo">
+                    <img src="images/camisa03.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> Camisa Palmeras </h5>
+                        <div class=" contenedor justify-content-mx-auto ">
+                            <select name="" class="talles">
+                                <option value="S"> S </option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                                            </select>
+                            <p class="card-text">2990</p>
+                            <a href="#" class="btn btn-dark agregarCarrito" data-id="10">Añadir al carrito</a>
+                            <p class="nuevoItem"></p>
+                        </div>
+                        <div class="textoConfirmacion">
+                            <p> Se agregó el producto al carrito </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="col">
+                <div class="card tarjetaHijo">
+                    <img src="images/zapatilla3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> Zapatillas Convers </h5>
+                        <div class=" contenedor justify-content-mx-auto ">
+                            <select name="" class="talles">
+                                <option value="S"> S </option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                                            </select>
+                            <p class="card-text"> 2890 </p>
+                            <a href="#" class="btn btn-dark agregarCarrito" data-id="11">Añadir al carrito</a>
+                            <p class="nuevoItem"></p>
+                        </div>
+                        <div class="textoConfirmacion">
+                            <p> Se agregó el producto al carrito </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="col">
+                <div class="card tarjetaHijo">
+                    <img src="images/jean4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"> Jean Ramen </h5>
+                        <div class=" contenedor justify-content-mx-auto ">
+                            <select name="" class="talles">
+                                <option value="S"> S </option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                                            </select>
+                            <p class="card-text">5190</p>
+                            <a href="#" class="btn btn-dark agregarCarrito" data-id="12">Añadir al carrito</a>
+                            <p class="nuevoItem"></p>
+                        </div>
+                        <div class="textoConfirmacion">
+                            <p> Se agregó el producto al carrito </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
         </div>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -295,6 +481,8 @@
 
 
 
+
+    <!-- APLICAR FILTROS -->
 
 
     <div class="filtrar">
@@ -308,8 +496,143 @@
             </div>
 
             <div class="offcanvas-body">
-                <p>TIPO</p>
-                <p>color</p>
+
+                <form action="">
+
+
+                    <div>
+
+
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"> CATEGORÍAS</li>
+
+
+                            <div class="form-check ">
+                                <input class="form-check-input" type="checkbox" value="" id="checkRemeras">
+                                <label class="form-check-label " for="flexCheckDefault">
+                                  Remeras
+                                </label>
+                            </div>
+                            <div class="form-check ">
+                                <input class="form-check-input" type="checkbox" value="" id="checkCamisas">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Camisas
+                                </label>
+                            </div>
+                            <div class="form-check ">
+                                <input class="form-check-input" type="checkbox" value="" id="checkCamisas">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Abrigos
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input " type="checkbox" value="" id="checkPantalones">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Pantalones
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input " type="checkbox" value="" id="checkCalzados">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Calzados
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input " type="checkbox" value="" id="checkAccesorios">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Accesorios
+                                </label>
+                            </div>
+
+
+                            <li class="list-group-item">COLOR</li>
+                            <div class="form-check">
+                                <input class="form-check-input " type="checkbox" value="" id="checkBlanco">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                 Blanco
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input " type="checkbox" value="" id="checkGris">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Gris
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input " type="checkbox" value="" id="checkNegro">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Negro
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input " type="checkbox" value="" id="checkMarron">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Marrón
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input " type="checkbox" value="" id="checkAzul">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Azul
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input " type="checkbox" value="" id="checkRojo">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Rojo
+                                </label>
+                            </div>
+
+
+
+                            <li class="list-group-item">PRECIO</li>
+                            <div class="form-check">
+                                <input class="form-check-input " type="checkbox" value="" id="check1000">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  Hasta $1000
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input " type="checkbox" value="" id="check1500">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                  De $1001 a $1500
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input " type="checkbox" value="" id="check2000">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    De $1501 a $2000
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input " type="checkbox" value="" id="check3000">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    De $2001 a $3000
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input class="form-check-input " type="checkbox" value="" id="check5000">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Más de $3000
+                                </label>
+                            </div>
+
+
+                        </ul>
+
+
+
+
+
+                    </div>
+
+
+                </form>
+
+
+
+
             </div>
 
         </div>
