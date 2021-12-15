@@ -1,5 +1,6 @@
 const carrito = document.querySelector('#carrito');
 const contenedorCarrito = document.querySelector('#listaCarrito tbody');
+const contenedorPreioTotal = document.querySelector('#precioTotalTabla');
 const vaciarCarrito = document.querySelector('#vaciarCarrito');
 const listaPrendas = document.querySelector('#listaPrendas');
 
@@ -259,6 +260,9 @@ articulosCarrito.forEach(prenda => {
 
     $("#precioTotalTabla").html("Total: $ ${totalPrecio}");
 
+
+
+    
 });
 */
 
@@ -267,7 +271,7 @@ articulosCarrito.forEach(prenda => {
 
 function getLS() {
 
-    if (localStorage.getItem('carrito') === nul) {
+    if (localStorage.getItem('carrito') === null) {
 
         productsCheck = []
 
@@ -282,7 +286,7 @@ function getLS() {
 
 
 
-function totalLive() {
+function totalLive(prenda) {
 
     total = 0
     totalProd = getLS();
@@ -290,14 +294,14 @@ function totalLive() {
     for (let i = 0; i < totalProd.length; i++) {
 
 
-        let element = Number(totalProd[i].precio * totalProd[i].cantidad);
+        let element = Number(prenda.precio * prenda.cantidad);
 
         total = total + element;
 
         console.log(total);
 
 
-        $("precioTablaTotal").html(`$ ${total.toLocalString('es')}`)
+        $("precioTablaTotal").html(`hola`)
     }
 
 
