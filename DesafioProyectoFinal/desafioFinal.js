@@ -155,7 +155,6 @@ function leerDatosPrenda(prenda) {
 
 
 
-
 //mostrar el carrito de compras al HTML
 
 function carritoHTML() {
@@ -167,10 +166,6 @@ function carritoHTML() {
     //recorrer el carrito para generar el HTML
 
 
-    /* <td>
-                
-                   <input type="number" class="form-control cantidad" min="1" value=${prenda.cantidad}> </td>
-          </td> */
 
     articulosCarrito.forEach(prenda => {
 
@@ -190,7 +185,7 @@ function carritoHTML() {
             <td> ${prenda.cantidad} </td>
            
             
-            <td> ${prenda.precio * prenda.cantidad}</td>
+            <td> $ ${prenda.precio * prenda.cantidad}</td>
 
             <a href='#' class="borrarPrenda" data-id="${prenda.id}"> x </a>
             </td> 
@@ -205,25 +200,50 @@ function carritoHTML() {
         contenedorCarrito.appendChild(rowCarrito);
 
 
+
+
     })
 
 
-    //agregamos un localStorage al carrito de compras
-    sincronizarStorage();
+    function calcularTotal() {
 
-    function sincronizarStorage() {
 
-        localStorage.setItem('carrito', JSON.stringify(articulosCarrito));
+        let total = 0;
+        for (let i = 0; i < 100; i++) {
+
+            let element = Number((articulosCarrito[i].precio) * (articulosCarrito[i].cantidad));
+            total = total + element;
+
+            sumaTotal = total
+
+
+            document.getElementById('totalCarrito').innerHTML = "$ " + sumaTotal;
+
+
+        }
+
+
+
+
+
+
+        //agregamos un localStorage al carrito de compras
+        sincronizarStorage();
+
+        function sincronizarStorage() {
+
+            localStorage.setItem('carrito', JSON.stringify(articulosCarrito));
+
+        }
+
+
 
     }
 
 
-
-
-
-
-
+    calcularTotal();
 }
+
 
 function limpiarHTML() {
 
@@ -232,4 +252,4 @@ function limpiarHTML() {
         contenedorCarrito.removeChild(contenedorCarrito.firstChild);
     }
 
-}
+};
