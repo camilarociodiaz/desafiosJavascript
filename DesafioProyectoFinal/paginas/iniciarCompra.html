@@ -24,12 +24,40 @@
 </head>
 
 
+
+
+
 <body>
 
 
-    <div id="carritoFinal" class="rowCarritoFinal">
 
-        <table id="listaCarritoFinal" class="u-full-width">
+
+    <header>
+
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand"> <img src="../images/Isologotipo blanco.png" alt=""></a>
+
+                <div id="caja"> </div>
+
+
+
+
+            </div>
+        </nav>
+
+    </header>
+
+
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Carrito de compras</h5>
+    </div>
+
+
+
+    <div id="carrito" class="rowCarrito">
+
+        <table id="listaCarrito" class="u-full-width">
 
             <div>
                 <thead>
@@ -40,6 +68,7 @@
                         <th>Talle</th>
                         <th> Precio </th>
                         <th> Cantidad</th>
+                        <th>subtotal</th>
                         <th>Eliminar</th>
 
                     </tr>
@@ -47,12 +76,34 @@
                 </thead>
                 <tbody></tbody>
 
+
+                <tr>
+                    <th> </th>
+                    <th> </th>
+                    <th> TOTAL </th>
+
+                    <th> </th>
+                    <th> </th>
+                    <th>
+                        <p id="totalCarrito"></p>
+                    </th>
+
+                </tr>
+
             </div>
 
 
 
 
         </table>
+
+
+
+    </div>
+
+
+
+    <div class="modal-footer">
 
 
         <a href="/DesafioProyectoFinal/desafioFinal.html" id="iniciarCompra" class="btn btn-dark"> Seguir comprando </a>
@@ -72,7 +123,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
 
-    <script src="/DesafioProyectoFinal/desafioFinal.js"></script>
+
     <script src="/DesafioProyectoFinal/animaciones.js"></script>
     <script src="iniciarCompra.js"></script>
 

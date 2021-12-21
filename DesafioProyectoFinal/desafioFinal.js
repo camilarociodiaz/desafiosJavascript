@@ -227,6 +227,9 @@ function carritoHTML() {
 
 
 
+
+
+
         //agregamos un localStorage al carrito de compras
         sincronizarStorage();
 
