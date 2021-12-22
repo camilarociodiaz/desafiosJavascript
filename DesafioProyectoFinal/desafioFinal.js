@@ -2,6 +2,7 @@ const carrito = document.querySelector('#carrito');
 const contenedorCarrito = document.querySelector('#listaCarrito tbody');
 const vaciarCarrito = document.querySelector('#vaciarCarrito');
 const listaPrendas = document.querySelector('#listaPrendas');
+const sumarTotal2 = document.querySelector('#totalCarrito')
 
 
 
@@ -27,6 +28,7 @@ function cargarEvent() {
         articulosCarrito = [];
 
         limpiarHTML();
+        limpiarHTML2();
 
     })
 
@@ -84,7 +86,11 @@ function eliminarPrenda(e) {
 
         carritoHTML();
 
+
     }
+
+
+
 
 
 }
@@ -214,10 +220,8 @@ function carritoHTML() {
             let element = Number((articulosCarrito[i].precio) * (articulosCarrito[i].cantidad));
             total = total + element;
 
-            sumaTotal = total
 
-
-            document.getElementById('totalCarrito').innerHTML = "$ " + sumaTotal;
+            document.getElementById('totalCarrito').innerHTML = "$ " + total;
 
 
         }
@@ -245,6 +249,11 @@ function carritoHTML() {
 
 
     calcularTotal();
+
+
+
+
+
 }
 
 
@@ -253,6 +262,16 @@ function limpiarHTML() {
     while (contenedorCarrito.firstChild) {
 
         contenedorCarrito.removeChild(contenedorCarrito.firstChild);
+    }
+
+};
+
+
+function limpiarHTML2() {
+
+    while (sumarTotal2.firstChild) {
+
+        sumarTotal2.removeChild(sumarTotal2.firstChild);
     }
 
 };
